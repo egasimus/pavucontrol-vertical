@@ -103,7 +103,7 @@ protected:
     ModelColumns portModel;
 
     Gtk::Expander *advancedOptions;
-    Gtk::HBox *portSelect, *offsetSelect;
+    Gtk::Box *portSelect, *offsetSelect;
     Gtk::ComboBox *portList;
     Glib::RefPtr<Gtk::ListStore> treeModel;
     Glib::RefPtr<Gtk::Adjustment> offsetAdjustment;

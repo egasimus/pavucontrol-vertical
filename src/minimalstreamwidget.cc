@@ -26,7 +26,7 @@
 
 /*** MinimalStreamWidget ***/
 MinimalStreamWidget::MinimalStreamWidget(BaseObjectType* cobject) :
-    Gtk::VBox(cobject),
+    Gtk::Box(cobject),
     channelsVBox(NULL),
     nameLabel(NULL),
     boldNameLabel(NULL),
@@ -45,6 +45,7 @@ void MinimalStreamWidget::init() {
      * in the constructor. */
 
     peakProgressBar.set_size_request(-1, 10);
+    //peakProgressBar.set_orientation(GTK_ORIENTATION_VERTICAL);
     channelsVBox->pack_end(peakProgressBar, false, false);
 
     /* XXX: Why is the peak meter hidden by default? Maybe the idea is that if

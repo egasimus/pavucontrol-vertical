@@ -28,7 +28,7 @@
 
 /*** CardWidget ***/
 CardWidget::CardWidget(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& x) :
-    Gtk::VBox(cobject) {
+    Gtk::Box(cobject) {
 
     x->get_widget("cardNameLabel", nameLabel);
     x->get_widget("profileList", profileList);
