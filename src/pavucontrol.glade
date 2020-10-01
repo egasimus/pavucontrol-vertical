@@ -18,8 +18,8 @@
       <object class="GtkBox" id="channelWidget">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="spacing">6</property>
         <property name="orientation">vertical</property>
+        <property name="spacing">6</property>
         <child>
           <object class="GtkLabel" id="channelLabel">
             <property name="visible">True</property>
@@ -39,10 +39,11 @@
           <object class="GtkScale" id="volumeScale">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="orientation">vertical</property>
             <property name="adjustment">adjustment1</property>
+            <property name="inverted">True</property>
             <property name="digits">0</property>
             <property name="draw_value">False</property>
-            <property name="orientation">vertical</property>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -87,11 +88,13 @@
           <object class="GtkBox" id="cardWidget">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
             <child>
               <object class="GtkBox" id="vbox7">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="border_width">12</property>
+                <property name="orientation">vertical</property>
                 <property name="spacing">6</property>
                 <child>
                   <object class="GtkBox" id="hbox9">
@@ -225,6 +228,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="border_width">12</property>
+                <property name="orientation">vertical</property>
                 <property name="spacing">6</property>
                 <child>
                   <object class="GtkBox" id="hbox2">
@@ -834,6 +838,7 @@
               <object class="GtkBox" id="vbox2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
                 <child>
                   <object class="GtkScrolledWindow" id="scrolledwindow2">
                     <property name="visible">True</property>
@@ -962,6 +967,7 @@
               <object class="GtkBox" id="vbox30">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
                 <child>
                   <object class="GtkScrolledWindow" id="scrolledwindow8">
                     <property name="visible">True</property>
@@ -1091,6 +1097,7 @@
               <object class="GtkBox" id="vbox31">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
                 <child>
                   <object class="GtkScrolledWindow" id="scrolledwindow7">
                     <property name="visible">True</property>
@@ -1221,6 +1228,7 @@
               <object class="GtkBox" id="vbox3">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
                 <child>
                   <object class="GtkScrolledWindow" id="scrolledwindow1">
                     <property name="visible">True</property>
@@ -1432,21 +1440,23 @@
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkBox" id="vbox6">
-                <property name="orientation">vertical</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="vexpand">True</property>
                 <property name="border_width">12</property>
+                <property name="orientation">vertical</property>
                 <property name="spacing">6</property>
                 <child>
                   <object class="GtkBox" id="hbox6">
-                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
                     <property name="spacing">6</property>
                     <child>
                       <object class="GtkImage" id="streamIconImage">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="halign">center</property>
                         <property name="stock">gtk-missing-image</property>
                       </object>
                       <packing>
@@ -1459,12 +1469,13 @@
                       <object class="GtkBox" id="hbox8">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="spacing">2</property>
                         <property name="orientation">vertical</property>
+                        <property name="spacing">2</property>
                         <child>
                           <object class="GtkLabel" id="streamBoldNameLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
+                            <property name="halign">center</property>
                             <property name="use_markup">True</property>
                           </object>
                           <packing>
@@ -1477,6 +1488,7 @@
                           <object class="GtkLabel" id="streamNameLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
+                            <property name="halign">center</property>
                             <property name="label" translatable="yes">Stream Title</property>
                             <property name="use_markup">True</property>
                             <property name="ellipsize">end</property>
@@ -1492,6 +1504,7 @@
                           <object class="GtkLabel" id="directionLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
+                            <property name="halign">center</property>
                             <property name="xpad">4</property>
                             <property name="label" translatable="yes">direction</property>
                             <property name="use_markup">True</property>
@@ -1526,6 +1539,7 @@
                       <object class="GtkBox" id="hbox13">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="halign">center</property>
                         <property name="spacing">3</property>
                         <child>
                           <object class="GtkToggleButton" id="streamMuteToggleButton">
@@ -1591,7 +1605,6 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">6</property>
-                    <property name="orientation">vertical</property>
                     <child>
                       <placeholder/>
                     </child>
