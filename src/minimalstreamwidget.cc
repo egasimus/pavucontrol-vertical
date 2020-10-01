@@ -47,7 +47,7 @@ void MinimalStreamWidget::init() {
     peakProgressBar.set_size_request(-1, 10);
     peakProgressBar.set_orientation(Gtk::Orientation::ORIENTATION_VERTICAL);
     peakProgressBar.set_inverted(true);
-    channelsVBox->pack_end(peakProgressBar, false, false);
+    channelsVBox->pack_start(peakProgressBar, false, false);
 
     /* XXX: Why is the peak meter hidden by default? Maybe the idea is that if
      * setting up the monitoring stream fails for whatever reason, then we
