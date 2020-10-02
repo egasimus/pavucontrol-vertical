@@ -107,6 +107,7 @@
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
                         <property name="stock">gtk-missing-image</property>
+                        <property name="icon_size">6</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -224,14 +225,14 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
-              <object class="GtkBox" id="vbox26">
+              <object class="GtkBox" id="deviceControls">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="border_width">12</property>
                 <property name="orientation">vertical</property>
                 <property name="spacing">6</property>
                 <child>
-                  <object class="GtkBox" id="hbox2">
+                  <object class="GtkBox" id="deviceHeader">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">6</property>
@@ -240,6 +241,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="stock">gtk-missing-image</property>
+                        <property name="icon_size">6</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -268,9 +270,11 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="label" translatable="yes">Device Title</property>
-                            <property name="use_markup">True</property>
                             <property name="ellipsize">end</property>
                             <property name="xalign">0</property>
+                            <attributes>
+                              <attribute name="underline" value="True"/>
+                            </attributes>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -286,74 +290,80 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkBox" id="hbox10">
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkBox" id="deviceButtons">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="spacing">3</property>
+                    <child>
+                      <object class="GtkToggleButton" id="deviceMuteToggleButton">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="spacing">3</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">False</property>
+                        <property name="tooltip_text" translatable="yes">Mute audio</property>
+                        <property name="hexpand">True</property>
+                        <property name="relief">none</property>
                         <child>
-                          <object class="GtkToggleButton" id="deviceMuteToggleButton">
+                          <object class="GtkImage" id="image20">
                             <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">False</property>
-                            <property name="tooltip_text" translatable="yes">Mute audio</property>
-                            <property name="relief">none</property>
-                            <child>
-                              <object class="GtkImage" id="image20">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="icon_name">audio-volume-muted</property>
-                                <property name="icon_size">1</property>
-                              </object>
-                            </child>
+                            <property name="can_focus">False</property>
+                            <property name="icon_name">audio-volume-muted</property>
+                            <property name="icon_size">1</property>
                           </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">False</property>
-                            <property name="position">0</property>
-                          </packing>
                         </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="deviceLockToggleButton">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">False</property>
+                        <property name="tooltip_text" translatable="yes">Lock channels together</property>
+                        <property name="hexpand">True</property>
+                        <property name="relief">none</property>
+                        <property name="active">True</property>
                         <child>
-                          <object class="GtkToggleButton" id="deviceLockToggleButton">
+                          <object class="GtkImage" id="image18">
                             <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">False</property>
-                            <property name="tooltip_text" translatable="yes">Lock channels together</property>
-                            <property name="relief">none</property>
-                            <property name="active">True</property>
-                            <child>
-                              <object class="GtkImage" id="image18">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="icon_name">changes-prevent</property>
-                                <property name="icon_size">1</property>
-                              </object>
-                            </child>
+                            <property name="can_focus">False</property>
+                            <property name="icon_name">changes-prevent</property>
+                            <property name="icon_size">1</property>
                           </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">False</property>
-                            <property name="position">1</property>
-                          </packing>
                         </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="defaultToggleButton">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">False</property>
+                        <property name="tooltip_text" translatable="yes">Set as fallback</property>
+                        <property name="hexpand">True</property>
                         <child>
-                          <object class="GtkToggleButton" id="defaultToggleButton">
+                          <object class="GtkImage" id="image2">
                             <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">False</property>
-                            <property name="tooltip_text" translatable="yes">Set as fallback</property>
-                            <child>
-                              <object class="GtkImage" id="image2">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="icon_name">emblem-default</property>
-                              </object>
-                            </child>
+                            <property name="can_focus">False</property>
+                            <property name="icon_name">emblem-default</property>
                           </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">False</property>
-                            <property name="position">2</property>
-                          </packing>
                         </child>
                       </object>
                       <packing>
@@ -365,8 +375,8 @@
                   </object>
                   <packing>
                     <property name="expand">False</property>
-                    <property name="fill">False</property>
-                    <property name="position">0</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
                   </packing>
                 </child>
                 <child>
@@ -403,15 +413,15 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">False</property>
-                    <property name="position">1</property>
+                    <property name="position">2</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkBox" id="deviceChannelsVBox">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="spacing">6</property>
                     <property name="vexpand">True</property>
+                    <property name="spacing">6</property>
                     <child>
                       <placeholder/>
                     </child>
@@ -422,7 +432,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">2</property>
+                    <property name="position">3</property>
                   </packing>
                 </child>
                 <child>
@@ -590,7 +600,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">False</property>
-                    <property name="position">3</property>
+                    <property name="position">4</property>
                   </packing>
                 </child>
               </object>
@@ -601,7 +611,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHSeparator" id="hseparator2">
+              <object class="GtkHSeparator" id="deviceSeparator">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
               </object>
@@ -1349,7 +1359,6 @@
           <object class="GtkLabel" id="connectingLabel">
             <property name="can_focus">False</property>
             <property name="label">...</property>
-            <property name="use_markup">True</property>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -1440,9 +1449,8 @@
           <object class="GtkBox" id="streamWidget">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
             <child>
-              <object class="GtkBox" id="vbox6">
+              <object class="GtkBox" id="streamControls">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="vexpand">True</property>
@@ -1456,24 +1464,27 @@
                     <property name="orientation">vertical</property>
                     <property name="spacing">6</property>
                     <child>
-                      <object class="GtkImage" id="streamIconImage">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="halign">center</property>
-                        <property name="stock">gtk-missing-image</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                      </packing>
+                      <placeholder/>
                     </child>
                     <child>
-                      <object class="GtkBox" id="hbox8">
+                      <object class="GtkBox" id="streamHeader">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="orientation">vertical</property>
                         <property name="spacing">2</property>
+                        <child>
+                          <object class="GtkImage" id="streamIconImage">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="stock">gtk-missing-image</property>
+                            <property name="icon_size">6</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
                         <child>
                           <object class="GtkLabel" id="streamBoldNameLabel">
                             <property name="visible">True</property>
@@ -1484,7 +1495,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">0</property>
+                            <property name="position">1</property>
                           </packing>
                         </child>
                         <child>
@@ -1500,9 +1511,78 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">1</property>
+                            <property name="position">2</property>
                           </packing>
                         </child>
+                        <child>
+                          <object class="GtkBox" id="streamButtons">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="spacing">3</property>
+                            <child>
+                              <object class="GtkToggleButton" id="streamMuteToggleButton">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">False</property>
+                                <property name="tooltip_text" translatable="yes">Mute audio</property>
+                                <property name="relief">none</property>
+                                <child>
+                                  <object class="GtkImage" id="image1">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="icon_name">audio-volume-muted</property>
+                                    <property name="icon_size">1</property>
+                                  </object>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">False</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkToggleButton" id="streamLockToggleButton">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">False</property>
+                                <property name="tooltip_text" translatable="yes">Lock channels together</property>
+                                <property name="relief">none</property>
+                                <property name="active">True</property>
+                                <child>
+                                  <object class="GtkImage" id="image3">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="icon_name">changes-prevent</property>
+                                    <property name="icon_size">1</property>
+                                  </object>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">False</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="streamRouting">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
                         <child>
                           <object class="GtkLabel" id="directionLabel">
                             <property name="visible">True</property>
@@ -1516,7 +1596,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">2</property>
+                            <property name="position">0</property>
                           </packing>
                         </child>
                         <child>
@@ -1528,64 +1608,6 @@
                             <property name="expand">False</property>
                             <property name="fill">True</property>
                             <property name="pack_type">end</property>
-                            <property name="position">3</property>
-                          </packing>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="expand">True</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkBox" id="hbox13">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="halign">center</property>
-                        <property name="spacing">3</property>
-                        <child>
-                          <object class="GtkToggleButton" id="streamMuteToggleButton">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">False</property>
-                            <property name="tooltip_text" translatable="yes">Mute audio</property>
-                            <property name="relief">none</property>
-                            <child>
-                              <object class="GtkImage" id="image1">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="icon_name">audio-volume-muted</property>
-                                <property name="icon_size">1</property>
-                              </object>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">False</property>
-                            <property name="position">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkToggleButton" id="streamLockToggleButton">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">False</property>
-                            <property name="tooltip_text" translatable="yes">Lock channels together</property>
-                            <property name="relief">none</property>
-                            <property name="active">True</property>
-                            <child>
-                              <object class="GtkImage" id="image3">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="icon_name">changes-prevent</property>
-                                <property name="icon_size">1</property>
-                              </object>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">False</property>
                             <property name="position">1</property>
                           </packing>
                         </child>
@@ -1595,6 +1617,9 @@
                         <property name="fill">True</property>
                         <property name="position">2</property>
                       </packing>
+                    </child>
+                    <child>
+                      <placeholder/>
                     </child>
                   </object>
                   <packing>
@@ -1607,8 +1632,8 @@
                   <object class="GtkBox" id="streamChannelsVBox">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="spacing">6</property>
                     <property name="vexpand">True</property>
+                    <property name="spacing">6</property>
                     <child>
                       <placeholder/>
                     </child>
@@ -1630,7 +1655,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHSeparator" id="hseparator8">
+              <object class="GtkHSeparator" id="streamSeparator">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
               </object>
