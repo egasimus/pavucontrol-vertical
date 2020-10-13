@@ -224,6 +224,11 @@
           <object class="GtkBox" id="deviceWidget">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <packing>
+              <property name="expand">False</property>
+              <property name="fill">True</property>
+              <property name="position">0</property>
+            </packing>
             <child>
               <object class="GtkBox" id="deviceControls">
                 <property name="visible">True</property>
@@ -272,12 +277,9 @@
                             <property name="label" translatable="yes">Device Title</property>
                             <property name="ellipsize">end</property>
                             <property name="xalign">0</property>
-                            <attributes>
-                              <attribute name="underline" value="True"/>
-                            </attributes>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
+                            <property name="expand">True</property>
                             <property name="fill">True</property>
                             <property name="position">1</property>
                           </packing>
@@ -295,7 +297,7 @@
                   </object>
                   <packing>
                     <property name="expand">False</property>
-                    <property name="fill">False</property>
+                    <property name="fill">True</property>
                     <property name="position">0</property>
                   </packing>
                 </child>
@@ -606,7 +608,7 @@
               </object>
               <packing>
                 <property name="expand">False</property>
-                <property name="fill">False</property>
+                <property name="fill">True</property>
                 <property name="position">0</property>
               </packing>
             </child>
@@ -721,7 +723,7 @@
             <property name="show_border">False</property>
             <property name="scrollable">True</property>
             <child>
-              <object class="GtkBox" id="vbox32">
+              <object class="GtkBox" id="playbackPage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
@@ -739,6 +741,7 @@
                           <object class="GtkBox" id="streamsVBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
+                            <property name="homogeneous">True</property>
                             <child>
                               <object class="GtkLabel" id="noStreamsLabel">
                                 <property name="visible">True</property>
@@ -835,7 +838,7 @@
               </object>
             </child>
             <child type="tab">
-              <object class="GtkLabel" id="label34">
+              <object class="GtkLabel" id="playbackPageLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">_Playback</property>
@@ -846,7 +849,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkBox" id="vbox2">
+              <object class="GtkBox" id="recordPage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
@@ -864,6 +867,7 @@
                           <object class="GtkBox" id="recsVBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
+                            <property name="homogeneous">True</property>
                             <child>
                               <object class="GtkLabel" id="noRecsLabel">
                                 <property name="visible">True</property>
@@ -963,7 +967,7 @@
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkLabel" id="label6">
+              <object class="GtkLabel" id="recordPageLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">_Recording</property>
@@ -975,7 +979,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkBox" id="vbox30">
+              <object class="GtkBox" id="outputPage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
@@ -993,6 +997,7 @@
                           <object class="GtkBox" id="sinksVBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
+                            <property name="homogeneous">True</property>
                             <child>
                               <object class="GtkLabel" id="noSinksLabel">
                                 <property name="visible">True</property>
@@ -1093,7 +1098,7 @@
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkLabel" id="label4711">
+              <object class="GtkLabel" id="outputPageLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">_Output Devices</property>
@@ -1105,7 +1110,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkBox" id="vbox31">
+              <object class="GtkBox" id="inputPage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
@@ -1124,6 +1129,7 @@
                           <object class="GtkBox" id="sourcesVBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
+                            <property name="homogeneous">True</property>
                             <child>
                               <object class="GtkLabel" id="noSourcesLabel">
                                 <property name="visible">True</property>
@@ -1224,7 +1230,7 @@
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkLabel" id="label4717">
+              <object class="GtkLabel" id="inputPageLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">_Input Devices</property>
@@ -1236,10 +1242,11 @@
               </packing>
             </child>
             <child>
-              <object class="GtkBox" id="vbox3">
+              <object class="GtkBox" id="configPage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
+                <property name="homogeneous">True</property>
                 <child>
                   <object class="GtkScrolledWindow" id="scrolledwindow1">
                     <property name="visible">True</property>
@@ -1337,7 +1344,7 @@
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkLabel" id="label7">
+              <object class="GtkLabel" id="configPageLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">_Configuration</property>
